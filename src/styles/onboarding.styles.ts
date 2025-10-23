@@ -1,0 +1,887 @@
+import { SxProps, Theme } from "@mui/material/styles";
+import { imageUrls } from "../utils/constant";
+
+export const roleSelectionStyles: Record<string, SxProps<Theme>> = {
+  roleBox: {
+    background: "#1A1A1A26",
+    border: "2px solid transparent",
+    backdropFilter: "blur(16.25px)",
+    WebkitBackdropFilter: "blur(16.25px)",
+    boxShadow: `
+      8.13px 8.13px 24.38px -5.2px #FFFFFF66 inset,
+      -16.25px -8.13px 8.13px -5.2px #FFFFFF33 inset,
+      0px 0px 20.8px -5.2px #FFFFFF33 inset
+    `,
+    borderRadius: "100px",
+    padding: 6,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    cursor: "pointer",
+    transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+    position: "relative",
+    "&:hover": {
+      borderColor: "#1B76D2",
+      transform: "translateY(-2px)",
+      boxShadow: `
+        8.13px 8.13px 24.38px -5.2px #FFFFFF66 inset,
+        -16.25px -8.13px 8.13px -5.2px #FFFFFF33 inset,
+        0px 0px 20.8px -5.2px #FFFFFF33 inset,
+        0 4px 12px rgba(27, 118, 210, 0.3)
+      `,
+    },
+  },
+  selectedBox: {
+    borderColor: "#1B76D2",
+    borderWidth: "2px",
+    background: "#1A1A1A26",
+    backdropFilter: "blur(16.25px)",
+    WebkitBackdropFilter: "blur(16.25px)",
+    boxShadow:
+      "0px 4px 4px 0px #00000040, inset 0px 6px 30.6px 0px rgba(247, 240, 240, 0.25)",
+    transform: "translateY(-1px)",
+  },
+  iconButton: {
+    position: "absolute",
+    top: 8,
+    right: 8,
+    color: "#1B76D2",
+    background: "#fff",
+    borderRadius: "50%",
+    fontSize: "1.5rem",
+    transition: "all 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
+    "&:hover": {
+      transform: "scale(1.1)",
+      boxShadow: "0 2px 8px rgba(27, 118, 210, 0.3)",
+    },
+  },
+  roleLabel: {
+    mt: 1,
+    fontSize: "0.875rem",
+    fontWeight: 600,
+    transition: "color 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
+    color: "#FFFFFF",
+    gap: 10,
+  },
+  selectedLabel: {
+    color: "#1B76D2",
+  },
+  roleContainer: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    minWidth: "120px",
+    flex: "0 0 auto",
+  },
+};
+
+export const hoursRestStyles: Record<string, SxProps<Theme>> = {
+  inputRow: {
+    display: "flex",
+    alignItems: "center",
+    gap: "8px !important",
+    my: 2,
+    justifyContent: "center",
+  },
+  select: {
+    minWidth: 120,
+    fontWeight: 600,
+    fontSize: "0.85rem",
+    color: "#FFFFFF",
+    borderBottom: "2px solid #FFFFFF",
+    "& .MuiInputBase-root": {
+      borderBottom: "1px solid #FFFFFF",
+    },
+    "& .MuiInput-underline:before": {
+      borderBottomColor: "#FFFFFF !important",
+    },
+    "& .MuiInput-underline:after": {
+      borderBottomColor: "#FFFFFF !important",
+    },
+    "& .MuiInput-underline:hover:before": {
+      borderBottomColor: "#FFFFFF !important",
+    },
+    "& .MuiInput-underline:hover:not(.Mui-disabled):before": {
+      borderBottomColor: "#FFFFFF !important",
+    },
+    "& .MuiSelect-select.Mui-disabled": {
+      color: "#FFFFFF !important",
+      WebkitTextFillColor: "#FFFFFF !important",
+    },
+    "& svg": {
+      color: "#FFFFFF !important",
+    },
+    "& .MuiSelect-icon": {
+      color: "#FFFFFF !important",
+    },
+    "& .MuiSelect-select": {
+      paddingRight: "24px !important",
+    },
+  },
+
+  dropdownMenuPaper: {
+    boxShadow: "0px 4px 4px 0px #00000040, inset 0px 6px 30.6px 0px #FFFFFF40",
+    background: "#1A1A1A26",
+    backdropFilter: "blur(20.25px)",
+    WebkitBackdropFilter: "blur(20.25px)",
+    maxHeight: 200,
+    overflowY: "auto",
+    scrollbarWidth: "thin",
+    scrollbarColor: "#888 transparent",
+    "&::-webkit-scrollbar": {
+      width: "6px",
+      borderRadius: "8px",
+      background: "#e0e0e0",
+    },
+    "&::-webkit-scrollbar-thumb": {
+      background: "#888",
+      borderRadius: "8px",
+    },
+    "&::-webkit-scrollbar-thumb:hover": {
+      background: "#857a7aff",
+    },
+    scrollBehavior: "smooth",
+    "& .MuiMenuItem-root": {
+      whiteSpace: "normal",
+      flexDirection: "column",
+      alignItems: "flex-start",
+      py: 1.5,
+      fontSize: "0.85rem",
+    },
+  },
+  dropdownMenuItem: {
+    color: "#000",
+  },
+  Dropdowncard: {
+    display: "flex",
+    alignItems: "center",
+    gap: 1,
+  },
+  hoursLabel: {
+    fontWeight: 600,
+    fontSize: "0.95rem",
+    color: "#FFFFFF",
+  },
+  hoursDescription: {
+    color: "#FFFFFF !important",
+    fontSize: "0.85rem",
+  },
+
+  autoComplete: {
+    "& .MuiInputBase-input": {
+      color: "#FFFFFF !important",
+      fontSize: "0.85rem",
+    },
+    "& .MuiInputLabel-root": {
+      color: "#FFFFFF !important",
+    },
+    "& .MuiInputLabel-root.Mui-focused": {
+      color: "#FFFFFF !important",
+    },
+    "& .MuiInput-underline:before": {
+      borderBottomColor: "#FFFFFF !important",
+    },
+    "& .MuiInput-underline:hover:before": {
+      borderBottomColor: "#FFFFFF !important",
+    },
+    "& .MuiInput-underline:after": {
+      borderBottomColor: "#FFFFFF !important",
+    },
+    "& .MuiAutocomplete-popupIndicator": {
+      color: "#FFFFFF !important",
+    },
+    "& .MuiAutocomplete-clearIndicator": {
+      color: "#FFFFFF !important",
+    },
+  },
+
+  quickSelectRow: {
+    display: "flex",
+    gap: { xs: 1, sm: 0.5, md: 0.8 },
+    mb: 2,
+    justifyContent: "center",
+    flexWrap: { xs: "wrap", sm: "nowrap" },
+    padding: { xs: "0 16px", sm: "0 28px", md: "0 36px" },
+  },
+  quickSelectBtn: {
+    border: "none",
+    borderRadius: 8,
+    fontWeight: 500,
+    fontSize: { xs: "0.875rem", sm: "0.9rem", md: "1rem" },
+    cursor: "pointer",
+    minWidth: { xs: "60px", sm: "50px", md: "80px" },
+    whiteSpace: "nowrap",
+    boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+    background: "#F5FBFF",
+    color: "#1B76D2",
+    transition: "background 0.2s ease, color 0.2s ease",
+    "&:hover": {
+      color: "#1B76D2",
+      border: "none",
+    },
+  },
+
+  quickSelectBtnActive: {
+    border: "none",
+    borderRadius: 8,
+    fontWeight: 500,
+    fontSize: { xs: "0.875rem", sm: "0.9rem", md: "1rem" },
+    cursor: "pointer",
+    minWidth: { xs: "60px", sm: "70px", md: "80px" },
+    whiteSpace: "nowrap",
+    boxShadow: "0 4px 20px rgba(59, 214, 254, 0.3)",
+    background: "linear-gradient(90deg, #3CD8FE, #1B76D2)",
+    color: "#fff",
+    transition: "background 0.2s ease, color 0.2s ease",
+    "&:hover": {
+      background: "linear-gradient(90deg, #2BC8EE, #0A66B2)",
+      color: "#fff",
+    },
+  },
+
+  divider: {
+    border: 0,
+    borderTop: "1px solid #E0E0E0",
+    my: 2,
+  },
+  selectContainer: {
+    mt: 2,
+    mb: 2,
+  },
+  selectRow: {
+    display: "flex",
+    flexDirection: "column",
+    gap: 2,
+    mb: 1,
+  },
+  selectLabel: {
+    fontWeight: 500,
+    fontSize: "0.875rem",
+    minWidth: 120,
+    textAlign: "left",
+    color: "#FFFFFF",
+  },
+  selectDescription: {
+    color: "#888",
+    fontSize: "0.85rem",
+    ml: 2,
+    textAlign: "left",
+  },
+  starRow: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: 1,
+  },
+  inputField: {
+    fontSize: "8px",
+    "& .MuiInputBase-input": {
+      color: "#FFFFFF",
+    },
+    "& .MuiInputBase-input.Mui-disabled": {
+      color: "#FFFFFF !important",
+      WebkitTextFillColor: "#FFFFFF !important",
+    },
+    "& .MuiInputBase-root": {
+      borderBottom: "1px solid #FFFFFF",
+    },
+    "& .MuiInput-underline:before": {
+      borderBottomColor: "#FFFFFF !important",
+    },
+    "& .MuiInput-underline:hover:before": {
+      borderBottomColor: "#FFFFFF !important",
+    },
+    "& .MuiInput-underline:after": {
+      borderBottomColor: "#FFFFFF !important",
+    },
+    "& .MuiInputLabel-root": {
+      fontSize: "0.85rem",
+      color: "#FFFFFF",
+    },
+    "& .MuiInputLabel-root .MuiInputLabel-asterisk": {
+      color: "red",
+    },
+    "& .MuiInputBase-label": {
+      color: " #FFFFFF",
+    },
+  },
+  autocompleteContainer: {
+    minWidth: 120,
+    width: "100%",
+    fontWeight: 600,
+    "& .MuiSelect-select": {
+      paddingRight: "24px !important",
+    },
+    "& .MuiInputBase-input": {
+      color: "#FFFFFF",
+    },
+    "& .MuiInputLabel-root": {
+      color: "#FFFFFF",
+    },
+    "& .MuiInputBase-root": {
+      borderBottom: "1px solid #FFFFFF",
+    },
+    "& .MuiInput-underline:before": {
+      borderBottomColor: "#FFFFFF !important",
+    },
+    "& .MuiInput-underline:hover:before": {
+      borderBottomColor: "#FFFFFF !important",
+    },
+    "& .MuiInput-underline:after": {
+      borderBottomColor: "#FFFFFF !important",
+    },
+    "& .MuiOutlinedInput-root": {
+      "& fieldset": {
+        borderColor: "#FFFFFF",
+      },
+      "&:hover fieldset": {
+        borderColor: "#FFFFFF",
+      },
+      "&.Mui-focused fieldset": {
+        borderColor: "#FFFFFF",
+      },
+    },
+    "& svg": {
+      color: "#FFFFFF !important",
+    },
+    "& .MuiAutocomplete-endAdornment": {
+      "& svg": {
+        color: "#FFFFFF !important",
+      },
+    },
+    "& .MuiAutocomplete-clearIndicator": {
+      color: "#FFFFFF !important",
+      "& svg": {
+        color: "#FFFFFF !important",
+      },
+    },
+    "& .MuiAutocomplete-popupIndicator": {
+      color: "#FFFFFF !important",
+      "& svg": {
+        color: "#FFFFFF !important",
+      },
+    },
+  },
+
+  autocompleteListbox: {
+    boxShadow: "0px 4px 4px 0px #00000040, inset 0px 6px 30.6px 0px #FFFFFF40",
+    background: "#1A1A1A26",
+    backdropFilter: "blur(20.25px)",
+    WebkitBackdropFilter: "blur(20.25px)",
+    color: "#FFFFFF !important",
+    maxHeight: 300,
+    "& .MuiAutocomplete-noOptions": {
+      backgroundColor: "transparent !important",
+      color: "#FFFFFF !important",
+      py: 1.5,
+      alignItems: "flex-start",
+      whiteSpace: "normal",
+    },
+    "& .MuiAutocomplete-option": {
+      color: "#FFFFFF !important",
+      backgroundColor: "transparent !important",
+      "&:hover": {
+        backgroundColor: "rgba(255, 255, 255, 0.1) !important",
+        color: "#FFFFFF !important",
+      },
+      "&[data-focus='true']": {
+        backgroundColor: "rgba(255, 255, 255, 0.1) !important",
+        color: "#FFFFFF !important",
+      },
+      "&[aria-selected='true']": {
+        backgroundColor: "rgba(255, 255, 255, 0.2) !important",
+        color: "#FFFFFF !important",
+      },
+    },
+  },
+
+  autocompletePaper: {
+    boxShadow: "0px 4px 4px 0px #00000040, inset 0px 6px 30.6px 0px #FFFFFF40",
+    background: "#1A1A1A26",
+    backdropFilter: "blur(20.25px)",
+    WebkitBackdropFilter: "blur(20.25px)",
+    color: "#FFFFFF !important",
+  },
+  selectMenuPaper: {
+    boxShadow: "0px 4px 4px 0px #00000040, inset 0px 6px 30.6px 0px #FFFFFF40",
+    background: "#1A1A1A26",
+    backdropFilter: "blur(20.25px)",
+    WebkitBackdropFilter: "blur(20.25px)",
+    maxHeight: 300,
+    "& .MuiMenuItem-root": {
+      color: "#000",
+      whiteSpace: "normal",
+      flexDirection: "column",
+      alignItems: "flex-start",
+      py: 1.5,
+    },
+  },
+};
+
+export const aorSelectionStyles: Record<string, SxProps<Theme>> = {
+  gridContainer: {
+    mt: 2,
+    mb: 4,
+    display: "grid",
+    gridTemplateColumns: "repeat(2, 1fr)",
+    gap: 2,
+    width: "100%",
+  },
+  aorGridScrollContainer: {
+    minHeight: 200,
+    maxHeight: 200,
+    overflowY: "auto",
+    scrollbarWidth: "thin",
+    scrollbarColor: "#888 transparent",
+    paddingRight: 2,
+    "&::-webkit-scrollbar": {
+      width: "6px",
+      borderRadius: "8px",
+      background: "transparent",
+    },
+    "&::-webkit-scrollbar-track": {
+      background: "transparent",
+    },
+    "&::-webkit-scrollbar-thumb": {
+      background: "#888",
+      borderRadius: "8px",
+    },
+    "&::-webkit-scrollbar-thumb:hover": {
+      background: "#555",
+    },
+  },
+  aorBox: {
+    borderRadius: "12px",
+    padding: "6px 12px",
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "flex-start",
+    cursor: "pointer",
+    position: "relative",
+    minHeight: "36px",
+    width: "100%",
+    boxShadow: "0 4px 16px rgba(0,0,0,0.2)",
+    transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+    "&:hover": {
+      transform: "translateY(-2px)",
+      boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
+    },
+  },
+  selectedBox: {
+    background: "#3D96E133",
+    backdropFilter: "blur(10.25px)",
+    WebkitBackdropFilter: "blur(10.25px)",
+    color: "#FFFFFF",
+    transform: "translateY(-1px)",
+    boxShadow: "0 4px 16px rgba(61, 150, 225, 0.3)",
+  },
+  unselectedBox: {
+    backgroundColor: "#1A1A1A26",
+    color: "#FFFFFF",
+    border: "1px solid #A0A3BD",
+  },
+  iconContainerSelected: {
+    width: 30,
+    height: 30,
+    mr: 1,
+    borderRadius: "8px",
+    backgroundColor: "#008EC3",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexShrink: 0,
+  },
+  iconContainerUnselected: {
+    width: 30,
+    height: 30,
+    mr: 1,
+    borderRadius: "8px",
+    backgroundColor: "#3D96E130",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexShrink: 0,
+  },
+  aorIcon: {
+    position: "absolute",
+    top: -4,
+    right: -4,
+    color: "#008EC3",
+    background: "#fff",
+    borderRadius: "50%",
+    fontSize: "1rem",
+  },
+  aorLabel: {
+    fontSize: "0.875rem",
+    fontWeight: 500,
+    textAlign: "left",
+    lineHeight: 1.3,
+    flex: 1,
+    display: "flex",
+    alignItems: "center",
+    whiteSpace: "nowrap",
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+  },
+  loadingContainer: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    minHeight: "200px",
+  },
+  selectWrapper: {
+    mt: 2,
+    mb: 2,
+    width: "100%",
+  },
+  dropdownMenuItem: {
+    display: "flex",
+    flexDirection: "row !important",
+    justifyContent: "space-between",
+    alignItems: "center",
+    fontSize: "0.8rem",
+  },
+};
+
+export const onboardingPageWrapperStyles = (bgImage?: string) => ({
+  backgroundImage: `url(${bgImage || imageUrls.bgPic})`,
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
+  minHeight: "100vh",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  position: "relative",
+});
+
+export const onboardingOverlayStyles = (
+  colorCode?: string,
+  opacity?: number,
+) => ({
+  position: "absolute",
+  top: 0,
+  left: 0,
+  width: "100%",
+  height: "100%",
+  backgroundColor: colorCode || "rgba(0, 0, 0, 0.45)",
+  opacity: opacity ?? 0.45,
+  pointerEvents: "none",
+  zIndex: 1,
+});
+
+export const styles: Record<string, SxProps<Theme>> = {
+  pageWrapper: {
+    backgroundImage: `url(${imageUrls.bgPic})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    minHeight: "100vh",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    position: "relative",
+    transition: "background-image 0.5s ease, background-color 0.5s ease",
+  },
+  cardContainer: {
+    background: "#1A1A1A26",
+    backdropFilter: "blur(10.25px)",
+    WebkitBackdropFilter: "blur(10.25px)",
+    borderRadius: "40px",
+    boxShadow: `
+      8.13px 8.13px 24.38px -5.2px #FFFFFF66 inset,
+      -16.25px -8.13px 8.13px -5.2px #FFFFFF33 inset,
+      0px 0px 20.8px -5.2px #FFFFFF33 inset
+    `,
+    py: 5,
+    padding: "30px 50px !important",
+    textAlign: "center",
+    marginTop: { xs: "120px", sm: "100px", md: "80px" },
+    marginBottom: { xs: "80px", sm: "60px", md: "40px" },
+    width: { xs: "90%", sm: "80%", md: "auto" },
+    minWidth: "600px",
+    maxWidth: "700px",
+    position: "relative",
+    zIndex: 2,
+    transition: "all 0.3s ease-in-out",
+    opacity: 1,
+    transform: "translateY(0)",
+  },
+  cardContainerA: {
+    marginTop: { xs: "120px", sm: "100px", md: "80px" },
+    width: "100%",
+    maxWidth: "1400px",
+    zIndex: 2,
+    transition: "all 0.3s ease-in-out",
+    opacity: 1,
+    transform: "translateY(0)",
+  },
+  headerTitle: {
+    textAlign: "center",
+    fontWeight: 600,
+    color: "#FFFFFF",
+    mb: 1,
+    fontSize: "2.5rem",
+    transition: "all 0.3s ease-in-out",
+    opacity: 1,
+    transform: "translateY(0)",
+  },
+  title: {
+    textAlign: "center",
+    fontWeight: 600,
+    color: "#FFFFFF",
+    mb: 1,
+    transition: "all 0.3s ease-in-out",
+    opacity: 1,
+    transform: "translateY(0)",
+  },
+  subtitle: {
+    color: "#FFFFFF",
+    fontSize: "0.775rem",
+    textAlign: "center",
+    transition: "all 0.3s ease-in-out",
+    opacity: 1,
+    transform: "translateY(0)",
+  },
+  menuItem: {
+    color: "#FFFFFF",
+    textAlign: "center",
+    "&.Mui-disabled": {
+      color: "rgba(255, 255, 255, 0.5)",
+    },
+  },
+  buttonContainer: {
+    display: "flex",
+    justifyContent: "center",
+    gap: 3,
+    mt: 4,
+  },
+  submitButton: {
+    background: "#1A1A1A26",
+    // border: "2px solid transparent",
+    backdropFilter: "blur(16.25px)",
+    WebkitBackdropFilter: "blur(16.25px)",
+    boxShadow: `
+      8.13px 8.13px 24.38px -5.2px #FFFFFF66 inset,
+      -16.25px -8.13px 8.13px -5.2px #FFFFFF33 inset,
+      0px 0px 20.8px -5.2px #FFFFFF33 inset
+    `,
+    borderRadius: "24px",
+    paddingX: 4,
+    paddingY: 1.5,
+    fontSize: "1rem",
+    fontWeight: 600,
+    textTransform: "none",
+    minWidth: "120px",
+    width: "200px",
+    transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+    "&:hover": {
+      transform: "translateY(-2px)",
+      boxShadow: `
+        inset 8.13px 8.13px 24.38px -5.2px #00000033,
+        inset -16.25px -8.13px 13.4px -5.2px #0000001A,
+        inset 0px 0px 8px -5.2px #FFFFFF33,
+        0 4px 12px rgba(255, 255, 255, 0.2)
+      `,
+    },
+    "&:active": {
+      transform: "translateY(0px)",
+    },
+  },
+
+  submitButtonText: {
+    fontWeight: 600,
+    fontSize: "1rem",
+    textAlign: "center",
+    color: "#2196F3",
+    textShadow: `
+     0px 4px 4px 0px #00000040, 
+    1px 1px 2px 0px #FFFFFF40 inset, 
+    -1px -1px 2px 0px #FFFFFF40 inset
+  `,
+  },
+
+  backButton: {
+    background: "#1A1A1A26",
+    // border: "2px solid transparent",
+    backdropFilter: "blur(16.25px)",
+    WebkitBackdropFilter: "blur(16.25px)",
+    boxShadow: `
+      8.13px 8.13px 24.38px -5.2px #FFFFFF66 inset,
+      -16.25px -8.13px 8.13px -5.2px #FFFFFF33 inset,
+      0px 0px 20.8px -5.2px #FFFFFF33 inset
+    `,
+    borderRadius: "24px",
+    paddingX: 4,
+    paddingY: 1.5,
+    fontSize: "1rem",
+    fontWeight: 600,
+    textTransform: "none",
+    minWidth: "120px",
+    width: "200px",
+    transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+    "&:hover": {
+      transform: "translateY(-2px)",
+      boxShadow: `
+        inset 8.13px 8.13px 24.38px -5.2px #00000033,
+        inset -16.25px -8.13px 13.4px -5.2px #0000001A,
+        inset 0px 0px 8px -5.2px #FFFFFF33,
+        0 4px 12px rgba(255, 255, 255, 0.2)
+      `,
+    },
+    "&:active": {
+      transform: "translateY(0px)",
+    },
+  },
+
+  copyright: {
+    position: "fixed",
+    left: 0,
+    bottom: 0,
+    width: "100vw",
+    py: 2,
+    fontSize: "0.75rem",
+    color: "#4192CD",
+    textAlign: "center",
+    background: "transparent",
+    zIndex: 1200,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 1,
+  },
+  inviteHead: {
+    textAlign: "center",
+    background: "transparent",
+  },
+  inviteTitle: {
+    fontWeight: 700,
+    mb: 2,
+    color: "#3D96E1",
+  },
+  subTitle: {
+    mb: 3,
+    fontSize: "0.9rem",
+    color: "#FFF",
+  },
+  contactText: {
+    color: "#FFF",
+    fontSize: "1rem",
+    lineHeight: 1.6,
+    px: 4,
+  },
+};
+
+export const signatureUploadStyles = {
+  headerrow: {
+    display: "flex",
+    alignItems: "left",
+    mb: 2,
+    justifyContent: "flex-start",
+    borderBottom: "1px solid #CBD0DC",
+  },
+  title: {
+    color: "#fff",
+    fontWeight: 500,
+    fontSize: "1.4rem",
+    textAlign: "left",
+  },
+  subtitle: {
+    color: "#fff",
+    fontSize: "0.95rem",
+    mb: 2,
+    textAlign: "left",
+  },
+  titleicon: {
+    border: "2px solid #FFF",
+    borderRadius: "50%",
+    width: 56,
+    height: 56,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    background: "rgba(255,255,255,0.08)",
+    mr: 2,
+  },
+  dashedBox: {
+    border: "1.5px dashed #FFF",
+    borderRadius: "10px",
+    background: "rgba(255,255,255,0.05)",
+    padding: "22px 0px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    mb: 3,
+    cursor: "pointer",
+    transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+    px: 5,
+    maxWidth: 400,
+    width: "100%",
+    mx: "auto",
+    "&:hover": {
+      borderColor: "#3D96E1",
+      background: "rgba(255,255,255,0.08)",
+      transform: "translateY(-1px)",
+    },
+  },
+  fileText: {
+    color: "#fff",
+    fontSize: "0.9rem",
+    mt: 2,
+    mb: 1,
+    textAlign: "center",
+  },
+  browseButton: {
+    mt: 2,
+    background: "transparent",
+    color: "#fff",
+    borderRadius: "10px",
+    border: "1px solid #fff",
+    fontWeight: 500,
+    px: 3,
+    py: 1,
+    textTransform: "none",
+    fontSize: "0.9rem",
+    boxShadow: "0 2px 8px rgba(33,150,243,0.15)",
+    transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+    "&:hover": {
+      background: "rgba(255,255,255,0.1)",
+      borderColor: "#3D96E1",
+      transform: "translateY(-1px)",
+      boxShadow: "0 4px 12px rgba(33,150,243,0.25)",
+    },
+  },
+  fileName: {
+    color: "#6EC1E4",
+    fontSize: "0.95rem",
+    mt: 1,
+    textAlign: "center",
+    wordBreak: "break-all",
+  },
+  preview: {
+    position: "relative",
+    width: "100%",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  previewImage: {
+    maxWidth: 180,
+    maxHeight: 80,
+    objectFit: "contain",
+    borderRadius: 6,
+    margin: "12px 0",
+  },
+  clearButton: {
+    mt: 1,
+    mb: 1,
+    borderRadius: 2,
+    fontWeight: 500,
+    minWidth: 80,
+  },
+};
